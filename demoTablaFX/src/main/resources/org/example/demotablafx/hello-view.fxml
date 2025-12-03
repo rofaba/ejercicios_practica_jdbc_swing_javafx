@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demotablafx.HelloController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.66666666666663" minWidth="10.0" prefWidth="379.9999796549479" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="464.3333740234375" minWidth="10.0" prefWidth="339.3333536783855" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="464.3333740234375" minWidth="10.0" prefWidth="339.3333536783855" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="412.6666666666667" minHeight="10.0" prefHeight="412.6666666666667" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="265.33337402343756" minHeight="10.0" prefHeight="128.00000000000006" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER_LEFT" prefHeight="155.0" prefWidth="255.0">
+         <children>
+            <Label text="Nombre">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtNombre" prefHeight="37.0" prefWidth="313.0">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </TextField>
+            <Label alignment="CENTER" text="Apellido">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtApellido">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </TextField>
+            <Label text="Edad">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtEdad">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </TextField>
+            <Label text="Imagen">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtImagen" prefHeight="33.0" prefWidth="226.0">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </TextField>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="btnAgregar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#agregarPersona" prefHeight="71.0" prefWidth="127.0" text="Agregar Persona" />
+         </children>
+      </VBox>
+      <TableView fx:id="tblPersona" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2">
+        <columns>
+          <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="colApellido" prefWidth="75.0" text="Apellido" />
+            <TableColumn fx:id="colEdad" prefWidth="75.0" text="Edad" />
+            <TableColumn fx:id="colImagen" prefWidth="75.0" text="Foto" />
+        </columns>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TableView>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+        <buttons>
+            <Button fx:id="btnEliminar" minWidth="69.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="37.0" text="ELiminar Persona" textAlignment="CENTER">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+          <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#modificar" text="Modificar Persona">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnVerDetalle" mnemonicParsing="false" onAction="#verDetalle" prefHeight="40.0" prefWidth="116.0" text="Ver Detalle" />
+        </buttons>
+      </ButtonBar>
+       </children>
+</GridPane>
